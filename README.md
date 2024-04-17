@@ -1,4 +1,4 @@
-# InternetShop
+# Project Rest Api
 
 Aplikacja webowa z autoryzacja.
 
