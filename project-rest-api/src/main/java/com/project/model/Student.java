@@ -1,6 +1,6 @@
-package com.project.rest.model;
+package com.project.model;
 
-import com.project.rest.model.Projekt;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import java.util.Set;
 
@@ -13,6 +13,27 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="student_id")
     private Integer studentId;
+
+    private String password;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 
     @Column(nullable = false, length = 50)
     private String imie;
@@ -31,6 +52,20 @@ public class Student {
 
     @ManyToMany(mappedBy = "studenci")
     private Set<Projekt> projekty;
+
+    public Student() {}
+    public Student(String imie, String nazwisko, String nrIndeksu, Boolean stacjonarny) {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.nrIndeksu = nrIndeksu;
+    }
+    public Student(String imie, String nazwisko, String nrIndeksu, String email, Boolean stacjonarny) {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.nrIndeksu = nrIndeksu;
+        this.email = email;
+        this.stacjonarny = stacjonarny;
+    }
 
     public Integer getStudentId() {
         return studentId;
@@ -79,19 +114,4 @@ public class Student {
     public void setStacjonarny(Boolean stacjonarny) {
         this.stacjonarny = stacjonarny;
     }
-
-    public Student() {}
-    public Student(String imie, String nazwisko, String nrIndeksu, Boolean stacjonarny) {
-        this.imie = imie;
-        this.nazwisko = nazwisko;
-        this.nrIndeksu = nrIndeksu;
-    }
-    public Student(String imie, String nazwisko, String nrIndeksu, String email, Boolean stacjonarny) {
-        this.imie = imie;
-        this.nazwisko = nazwisko;
-        this.nrIndeksu = nrIndeksu;
-        this.email = email;
-        this.stacjonarny = stacjonarny;
-    }
-
 }

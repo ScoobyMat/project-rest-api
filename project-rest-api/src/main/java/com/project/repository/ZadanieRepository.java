@@ -1,11 +1,11 @@
-package com.project.rest.repository;
+package com.project.repository;
 
+import com.project.model.Zadanie;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import com.project.rest.model.Zadanie;
 
 import java.util.List;
 
