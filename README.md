@@ -1,6 +1,13 @@
 # Project Rest Api
-
 Aplikacja webowa z autoryzacja.
+Aplikacja jest zupełnym przeciwieństwem stosowania m.in zasad CleanCode, Generate Token Architecture.
+Jeśli państwo chcecie się nauczyć dobrych praktyk ta aplikacja jest kompletnym przeciwieństwem tego.
+## Uwaga
+Czytanie kodu może powodować m.in: 
+- Ból oczu, wręcz nie do zniesienia
+- Migrena
+- Ból pleców
+- I tym podobne
 
 ## Spis Treści
 
